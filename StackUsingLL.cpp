@@ -24,3 +24,21 @@ void pop () {
 	top=top->next;
 	delete hapus;
 }
+
+bool isEmpty () {
+	return (top==NULL);
+}
+
+void printStack () {
+	node *bantu=top;
+	if (!isEmpty()){
+		do {
+		cout<<bantu->data<<endl;
+		bantu=bantu->next;
+	}
+	while (bantu!=NULL);
+	}
+	else {
+		cout<<"Stack Kosong"<<endl;
+	}
+}
