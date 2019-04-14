@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+struct node {
+	int data;
+	node *next;
+};
+
+node *top=NULL;
+
+void push (int newdata){
+	node *newnode=new node;
+	newnode->data=newdata;
+	newnode->next=top;
+	top=newnode;
+}
+
+void pop () {
+	node *hapus;
+	if (top==NULL){
+		return ;
+	}
+	hapus=top;
+	top=top->next;
+	delete hapus;
+}
