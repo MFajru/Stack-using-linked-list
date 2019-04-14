@@ -75,9 +75,9 @@ int main (){
 			break;
 	}
 	cout<<"======================================================================================="<<endl;
-	cout<<"Ketik 'y' untuk kembali ke menu"<<endl;
+	cout<<"Ketik 'y/Y' untuk kembali ke menu"<<endl;
 	cin>>balik;
-	}while (balik=='y');
+	}while (balik=='y'||'Y');
 	
 	return 0;
 }
