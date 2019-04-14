@@ -42,3 +42,42 @@ void printStack () {
 		cout<<"Stack Kosong"<<endl;
 	}
 }
+
+int main (){
+	int n, pilih,nilai;
+	char balik;
+	do{
+	cout<<"======================================================================================="<<endl;
+	cout<<"-----MENU-----"<<endl<<"1. Push Stack"<<endl<<"2. Pop Stack"<<endl<<"3. Tampilkan Stack"<<endl<<"Pilihan : ";
+	cin>>pilih;
+	switch (pilih){
+		case 1:
+			cout<<"Masukan banyaknya stack yg ingin di-push = ";
+			cin>>n;
+			for (int i=0;i<n;i++){
+				cout<<"Masukan nilai ke-"<<i+1<<" = ";
+				cin>>nilai;
+				push(nilai);
+			}
+			break;
+		case 2:
+			cout<<"Masukan banyaknya stack yg ingin di-pop = ";
+			cin>>n;
+			for (int j=0;j<n;j++){
+				pop();
+			}
+			break;
+		case 3:
+			printStack();
+			break;
+		default:
+			cout<<"Pilihan tidak tersedia"<<endl;
+			break;
+	}
+	cout<<"======================================================================================="<<endl;
+	cout<<"Ketik 'y' untuk kembali ke menu"<<endl;
+	cin>>balik;
+	}while (balik=='y');
+	
+	return 0;
+}
